@@ -1,9 +1,7 @@
-package org.lerencao.projecteuler
+package org.lerencao.projecteuler.Q60
 
-import org.scalatest._
+import org.lerencao.projecteuler.utils.{Prime, UnitSpec}
 
-
-abstract class UnitSpec extends FlatSpec with Matchers with OptionValues with Inside with Inspectors
 
 class PrimePairSetSpec extends UnitSpec {
   "prime stream" should "generate prime numbers correctly" in {
