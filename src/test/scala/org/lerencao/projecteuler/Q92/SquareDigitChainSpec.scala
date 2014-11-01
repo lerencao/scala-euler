@@ -7,7 +7,7 @@ class SquareDigitChainSpec extends UnitSpec {
     SquareDigitChain(44).takeWhile(_ != 1).toList shouldBe List(32, 13, 10)
     SquareDigitChain(85).takeWhile(_ != 89).toList shouldBe Nil
   }
-  "runAnswer" should "return correct answer" in {
-    println(SquareDigitChain.runAnswer(10000000))
+  "Solution" should "return correct answer" in {
+    Solution(10000000) shouldBe 8581146
   }
 }

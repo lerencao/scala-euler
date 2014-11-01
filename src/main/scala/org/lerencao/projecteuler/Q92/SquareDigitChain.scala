@@ -11,14 +11,16 @@ object SquareDigitChain {
     }
     digitSquare #:: apply(digitSquare)
   }
+}
 
-  def runAnswer(upperBound: Int): Int = {
+object Solution {
+  def apply(upperBound: Int): Int = {
     // except the start number, the biggest chained number is digitLength * 9^2
     val cache = Array.fill(upperBound.toString.length * 81 + 1) { 0 }
     var count = 0 // count for 89
 
     for (n <- 1 until upperBound) {
-      val chains = apply(n)
+      val chains = SquareDigitChain(n)
 
       val beforeTerminate = chains.takeWhile(c => cache(c) == 0 && c != 1 && c != 89)
       val terminator = chains(beforeTerminate.length)
