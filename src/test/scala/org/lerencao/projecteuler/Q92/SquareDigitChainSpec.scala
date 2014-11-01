@@ -10,4 +10,8 @@ class SquareDigitChainSpec extends UnitSpec {
   "Solution" should "return correct answer" in {
     Solution(10000000) shouldBe 8581146
   }
+
+  "Alternative solution" should "also return correct answer" in {
+    Solution.alternative(7) shouldBe 8581146
+  }
 }
